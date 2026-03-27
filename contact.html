@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Contact Vale's Greenhouse with any gardening questions you have!">
+        <title>Vale's Greenhouse - Contact</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="form.js" defer></script>
+        <meta name="author" content="Ashley Heeke">
+    </head>
+    <body>
+        <header>
+            <div id="brand">
+                <a href="index.html" id="logo"><img src="images/logo.png" alt="A circular logo containing mountains and trees with a river in the middle"></a>
+                <h1>Vale's Greenhouse</h1>
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li><a href=index.html>Home</a></li>
+                    <li><a href=about.html>About Us</a></li>
+                    <li class="active"><a href=contact.html>Contact</a></li>
+                    <li><a href=gifts.html>Gift Certificates</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contact">
+            <div id="contact-div">
+                <section id="info">
+                    <h2>Contact Details</h2>
+                    <h3>Telephone</h3>
+                    <a href="tel:4039334814">(903) 933-4814</a>
+                    <h3>Street Address</h3>
+                    <a href="https://www.google.com/maps/place/301+3+St+NW,+Diamond+Valley,+AB+T0L+0H0,+Canada" target="_blank">
+                        301 - 3rd Street NW<br>
+                        Black Diamond
+                    </a>
+                    <h3>Mailing Address</h3>
+                    <p>Box 186<br>Black Diamond, AB T0L 0H0</p>
+                </section>
+
+                <div id="contact-form">
+                    <section id="form">
+                        <h2>Contact Us</h2>
+                        <form>
+                            <label for="first-name">First Name:<span class="required">*</span></label>
+                            <span class="error-mess">Please enter your first name here</span>
+                            <input type="text" name="first-name" id="first-name">
+        
+                            <label for="last-name">Last Name:<span class="required">*</span></label>
+                            <span class="error-mess">Please enter your last name here</span>
+                            <input type="text" name="last-name" id="last-name">
+        
+                            <fieldset>
+                                <legend>Contact Prefernece:<span class="required">*</span></legend>
+                                <input type="radio" name="contact-pref" id="email-pref" checked>
+                                <label for="email-pref">Email</label>
+                                <input type="radio" name="contact-pref" id="phone-pref">
+                                <label for="phone-pref">Phone</label>
+                            </fieldset>
+        
+                            <label for="my-email">Email Address:<span class="required">*</span></label>
+                            <span class="error-mess">Please enter your email here</span>
+                            <input type="email" name="my-email" id="my-email">
+        
+                            <label for="my-phone">Phone Number:<span class="hidden required">*</span></label>
+                            <span class="error-mess">Please enter your phone number here</span>
+                            <input type="tel" name="my-phone" id="my-phone">
+    
+                            <input type="submit" name="my-submit" id="my-submit">
+                        </form>
+                    </section>
+    
+                    <section id="thank-you" class="hidden">
+                        <h3>Thank you!</h3>
+                        
+                    </section>
+                </div>
+            </div>
+
+            <section id="hrs">
+                <h2>Seasonal hours</h2>
+                <div id="hours">
+                    <div class="month">
+                        <h3>April</h3>
+                        <p>9 a.m. - 5 p.m.<br>7 days a week</p>
+                    </div>
+                    <div class="month">
+                        <h3>May</h3>
+                        <p>9 a.m. - 8 p.m.<br>Monday - Saturday<br>10 a.m. - 7 p.m.<br>Sundays</p>
+                    </div>
+                    <div class="month">
+                        <h3>June</h3>
+                        <p>9 a.m. - 5 p.m.<br>Monday - Saturday<br>10 a.m. - 5 p.m.<br>Sundays</p>
+                    </div>
+                    <div class="month">
+                        <h3>July</h3>
+                        <p>9 a.m. - 5 p.m.<br>Monday - Saturday<br>10 a.m. - 5 p.m.<br>Sundays</p>
+                    </div>
+                    <div class="month">
+                        <h3>August</h3>
+                        <p>9 a.m. - 5 p.m.<br>Monday - Saturday<br>10 a.m. - 5 p.m.<br>Sundays</p>
+                    </div>
+                    <div class="month">
+                        <h3>September</h3>
+                        <p>9 a.m. - 5 p.m.<br>Monday - Saturday</p>
+                    </div>
+                    <div class="month">
+                        <h3>October</h3>
+                        <p>9 a.m. - 5 p.m.<br>Monday - Friday<br><em>Phone for weekend hours</em></p>
+                    </div>
+                    <div class="month">
+                        <h3>November</h3>
+                        <p>9 a.m. - 5 p.m.<br>Monday - Friday<br><em>Phone for weekend hours</em></p>
+                    </div>
+                    <div class="month">
+                        <h3>December</h3>
+                        <p>9 a.m. - 5 p.m.<br>Monday - Friday<br><em>Phone for weekend hours</em></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2025 Ashley Heeke. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

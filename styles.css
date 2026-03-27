@@ -1,0 +1,594 @@
+/* ------------------- AUTHOR: Ashley Heeke ------------------------------- */
+/* ------------------- IMPORTED FONTS ------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Quicksand:wght@300..700&display=swap');
+
+/*-------------------- CSS RESET ------------------------------------------ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------- ROOT VARIABLES ------------------------------------- */
+:root {
+    --dark-green: #41613A;
+    --light-green: #C5D6C1;
+    --black: #000;
+    --white: #fff;
+    --light-gray: #dee3df;
+    --dark-gray: #454545;
+    --red: #d6140d;
+    --h1-font: "Bonheur Royale", cursive;
+    --body-font: "Quicksand", sans-serif;
+    font-size: 16px;
+}
+
+/* ------------------- GLOBAL STYLES (mobile first/small) ------------------*/
+html {
+    background-color: var(--light-green);
+    background-image: url("https://www.transparenttextures.com/patterns/washi.png");
+}
+
+header {
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    max-width: 80%;
+    background-color: var(--dark-green);
+}
+
+#brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    margin: 1rem 0;
+    color: var(--white);
+    font-family: var(--h1-font);
+    font-size: 4rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: var(--white);
+    font-family: var(--body-font);
+    border-radius: 10px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+#menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: 0.3s ease;
+}
+
+#menu li a:hover, #menu li.active a {
+    color: var(--white);
+    background-color: var(--dark-green);
+    border-radius: 4px;
+    box-shadow: 3px 3px 7px var(--dark-gray);
+}
+
+main {
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    max-width: 80%;
+    padding: 1rem;
+    font-family: var(--body-font);
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#home p, #about p {
+    line-height: 1.6;
+    padding: 0.5rem 0;
+}
+
+footer {
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    max-width: 80%;
+    background-color: var(--dark-green);
+    color: var(--white);
+    font-family: var(--body-font);
+}
+
+/* ------------------- Home Page Styles ------------------------------------*/
+#slideshow {
+    width: 100%;
+    margin: auto;
+}
+
+#slideshow img, #about img, #gift img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px var(--dark-gray);
+}
+
+strong {
+    font-weight: bold;
+}
+
+#description {
+    width: 100%;
+    margin: auto;
+}
+
+#description h2 {
+    padding: 1rem 0 0;
+}
+
+#weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#weather h2 {
+    margin-bottom: 0.5rem;
+}
+
+#weather img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#weather dl {
+	padding-left: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	gap: 1rem;
+}
+
+#weather dt {
+	font-weight: bold;
+	text-align: right;
+}
+
+#weather dl {
+	grid-template-columns: 1fr 1fr;
+	width: fit-content;
+	margin: 0 auto;
+	font-size: 1.1rem;
+}
+
+/* ------------------- About Us Styles -------------------------------------*/
+#about h2 {
+    margin-bottom: 1rem;
+}
+
+/* ------------------- Contact Styles --------------------------------------*/
+#contact h2 {
+    text-align: center;
+}
+
+#form {
+    margin: 1rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-mess {
+    display: none;
+    color: var(--red);
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.errorInput {
+    border: 1.5px solid var(--red);
+}
+
+.hidden {
+    display: none;
+}
+
+input, select {
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+input:focus, button:focus {
+    outline: 2px solid var(--red);
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+fieldset label {
+    margin: 0;
+}
+
+fieldset legend {
+    margin: 1rem 0;
+}
+
+input[type="radio"] {
+    box-shadow: none;
+    height: 2rem;
+}
+
+button, input[type=submit] {
+    display: block;
+    margin: 1rem auto;
+    background-color: var(--dark-green);
+    border: none;
+    color: var(--white);
+    padding: 0.75rem;
+    font-size: 1rem;
+    box-shadow:3px 3px 7px var(--dark-gray);
+    font-weight: bold;
+    width: 320px;
+}
+
+form {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    font-size: 1rem;
+}
+
+input {
+    display: block;
+    margin: 0.25em auto;
+    width: 100%;
+}
+
+input, textarea, select {
+    display: block;
+    padding: 0.5rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    box-shadow:3px 3px 7px var(--dark-gray);
+    font-size: 1rem;
+}
+
+label {
+    display: inline-block;
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+}
+
+form span {
+    color: var(--red);
+}
+
+#thank-you {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--red);
+    text-align: center;
+    min-height: 4rem;
+}
+
+#info {
+    margin: auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 7px var(--dark-gray);
+}
+
+#info h3 {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--dark-green);
+    font-weight: bold;
+}
+
+#info a {
+    color: var(--dark-green);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+#info a:hover {
+    text-decoration: underline;
+}
+
+#info p {
+    margin: 0.5rem 0 1rem;
+    line-height: 1.6;
+}
+
+#hrs {
+    margin: auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 7px var(--dark-gray);
+}
+
+#hrs h2 {
+    margin-bottom: 2rem;
+}
+
+.month {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-left: 4px solid var(--dark-green);
+
+}
+
+.month h3 {
+    margin: 0 0 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.month p {
+    line-height: 1.6;
+}
+
+.month em {
+    font-style: italic;
+}
+
+/* ------------------- Gift Page Styles ------------------------------------*/
+#gift {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: auto;
+}
+
+#gift-info {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px var(--dark-gray);
+}
+
+#gift-info h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#gift-info p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#gift-info ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+#gift-info li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+#gift-example {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#gift-example img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 880px) {
+    #brand {
+        flex-direction: row;
+        gap: 1.5rem;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 5rem;
+        margin: 0;
+    }
+
+    #logo img {
+        margin-bottom: 1rem;
+    }
+
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 1rem 2rem;
+    }
+    
+    #menu li a {
+        display: inline-block;
+    }
+
+    #info {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #hours {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .month {
+        flex: 1 1 calc(33.333% - 0.67rem);
+        box-sizing: border-box;
+    }
+
+    #contact-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #about {
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    #about h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #about img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem;
+    }
+
+    #map {
+        float: right;
+    }
+
+    #greenhouse {
+        float: left;
+    }
+
+    #about p {
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+    }
+
+    #content-pair {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    #description, #weather {
+        flex: 1;
+    }
+}
+
+/*-------------------- MEDIA QUERY (large) -------------------------------- */
+@media (min-width: 1300px) {
+    main, header, footer {
+        max-width: 70%;
+    }
+    
+    #menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #info {
+        max-width: 400px;
+    }
+
+    #hours {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .month {
+        min-width: 0;
+    }
+}
